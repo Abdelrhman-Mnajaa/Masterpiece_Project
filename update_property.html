@@ -6,7 +6,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Update Property</title>
+   <title>update property</title>
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    <!-- custom css file link  -->
@@ -74,151 +74,208 @@
 
 </header>
 
-<!-- header section ends --><!-- index section starts  -->
-<div class="index">
-   <section class="center">
-      <form action="search.html" method="post">
-         <h3>find your perfect index</h3>
+<!-- header section ends -->
+<section class="property-form">
+
+      <form action="" method="POST" enctype="multipart/form-data">
+      <input type="hidden" name="property_id" value="FxIEVui9vXVmClbXsJQR">
+      <input type="hidden" name="old_image_01" value="6GxQ6rE8RDR7Efaz4E9i.jpg">
+      <input type="hidden" name="old_image_02" value="A0YFXW3LaqNuqE5S3xVH.jpg">
+      <input type="hidden" name="old_image_03" value="qOWKXlb1lnlbECaxDjVi.jpg">
+      <input type="hidden" name="old_image_04" value="">
+      <input type="hidden" name="old_image_05" value="">
+      <h3>property details</h3>
+      <div class="box">
+         <p>property name <span>*</span></p>
+         <input type="text" name="property_name" required maxlength="50" placeholder="enter property name" value="test" class="input">
+      </div>
+      <div class="flex">
          <div class="box">
-            <p>enter location <span>*</span></p>
-            <input type="text" name="h_location" required maxlength="100" placeholder="" class="input">
+            <p>property price <span>*</span></p>
+            <input type="number" name="price" required min="0" max="9999999999" maxlength="10" value="5852" placeholder="enter property price" class="input">
          </div>
-         <div class="flex">
-            <div class="box">
-               <p>property type <span>*</span></p>
-               <select name="h_type" class="input" required>
-                  <option value="flat">flat</option>
-                  <option value="house">house</option>
-                  <option value="shop">shop</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>offer type <span>*</span></p>
-               <select name="h_offer" class="input" required>
-                  <option value="sale">sale</option>
-                  <option value="resale">resale</option>
-                  <option value="rent">rent</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>minimmum budget <span>*</span></p>
-               <select name="h_min" class="input" required>
-                  <option value="5000">5k</option>
-                  <option value="10000">10k</option>
-                  <option value="15000">15k</option>
-                  <option value="20000">20k</option>
-                  <option value="30000">30k</option>
-                  <option value="40000">40k</option>
-                  <option value="40000">40k</option>
-                  <option value="50000">50k</option>
-                  <option value="100000">100k</option>
-                  <option value="500000">500k</option>
-
-               </select>
-            </div>
-            <div class="box">
-               <p>maximum budget <span>*</span></p>
-               <select name="h_max" class="input" required>
-                  <option value="5000">5k</option>
-                  <option value="10000">10k</option>
-                  <option value="15000">15k</option>
-                  <option value="20000">20k</option>
-                  <option value="30000">30k</option>
-                  <option value="40000">40k</option>
-                  <option value="40000">40k</option>
-                  <option value="50000">50k</option>
-                  <option value="100000">100k</option>
-                  <option value="500000">500k</option>
-
-               </select>
-            </div>
+         <div class="box">
+            <p>deposite amount <span>*</span></p>
+            <input type="number" name="deposite" required min="0" max="9999999999" value="51551" maxlength="10" placeholder="enter deposite amount" class="input">
          </div>
-         <input type="submit" value="search property" name="h_search" class="btn">
-      </form>
+         <div class="box">
+            <p>property address <span>*</span></p>
+            <input type="text" name="address" required maxlength="100" placeholder="enter property full address" class="input" value="amman">
+         </div>
+         <div class="box">
+            <p>offer type <span>*</span></p>
+            <select name="offer" required class="input">
+               <option value="sale" selected>sale</option>
+               <option value="sale">sale</option>
+               <option value="resale">resale</option>
+               <option value="rent">rent</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>property type <span>*</span></p>
+            <select name="type" required class="input">
+               <option value="house" selected>house</option>
+               <option value="flat">flat</option>
+               <option value="house">house</option>
+               <option value="shop">shop</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>property status <span>*</span></p>
+            <select name="status" required class="input">
+               <option value="ready to move" selected>ready to move</option>
+               <option value="ready to move">ready to move</option>
+               <option value="under construction">under construction</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>furnished status <span>*</span></p>
+            <select name="furnished" required class="input">
+               <option value="semi-furnished" selected>semi-furnished</option>
+               <option value="furnished">furnished</option>
+               <option value="semi-furnished">semi-furnished</option>
+               <option value="unfurnished">unfurnished</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>how many BHK <span>*</span></p>
+            <select name="bhk" required class="input">
+               <option value="4" selected>4 BHK</option>
+               <option value="1">1 BHK</option>
+               <option value="2">2 BHK</option>
+               <option value="3">3 BHK</option>
+               <option value="4">4 BHK</option>
+               <option value="5">5 BHK</option>
+               <option value="6">6 BHK</option>
+               <option value="7">7 BHK</option>
+               <option value="8">8 BHK</option>
+               <option value="9">9 BHK</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>how many bedrooms <span>*</span></p>
+            <select name="bedroom" required class="input">
+               <option value="3" selected>3 bedroom</option>
+               <option value="0">0 bedroom</option>
+               <option value="1">1 bedroom</option>
+               <option value="2">2 bedroom</option>
+               <option value="3">3 bedroom</option>
+               <option value="4">4 bedroom</option>
+               <option value="5">5 bedroom</option>
+               <option value="6">6 bedroom</option>
+               <option value="7">7 bedroom</option>
+               <option value="8">8 bedroom</option>
+               <option value="9">9 bedroom</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>how many bathrooms <span>*</span></p>
+            <select name="bathroom" required class="input">
+               <option value="2" selected>2 bathroom</option>
+               <option value="1">1 bathroom</option>
+               <option value="2">2 bathroom</option>
+               <option value="3">3 bathroom</option>
+               <option value="4">4 bathroom</option>
+               <option value="5">5 bathroom</option>
+               <option value="6">6 bathroom</option>
+               <option value="7">7 bathroom</option>
+               <option value="8">8 bathroom</option>
+               <option value="9">9 bathroom</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>how many balconys <span>*</span></p>
+            <select name="balcony" required class="input">
+               <option value="2" selected>2 balcony</option>
+               <option value="0">0 balcony</option>
+               <option value="1">1 balcony</option>
+               <option value="2">2 balcony</option>
+               <option value="3">3 balcony</option>
+               <option value="4">4 balcony</option>
+               <option value="5">5 balcony</option>
+               <option value="6">6 balcony</option>
+               <option value="7">7 balcony</option>
+               <option value="8">8 balcony</option>
+               <option value="9">9 balcony</option>
+            </select>
+         </div>
+         <div class="box">
+            <p>carpet area <span>*</span></p>
+            <input type="number" name="carpet" required min="1" max="9999999999" maxlength="10" placeholder="how many squarefits?" class="input" value="1515">
+         </div>
+         <div class="box">
+            <p>property age <span>*</span></p>
+            <input type="number" name="age" required min="0" max="99" maxlength="2" placeholder="how old is property?" class="input" value="5">
+         </div>
+         <div class="box">
+            <p>total floors <span>*</span></p>
+            <input type="number" name="total_floors" required min="0" max="99" maxlength="2" placeholder="how floors available?" class="input" value="2">
+         </div>
+         <div class="box">
+            <p>floor room <span>*</span></p>
+            <input type="number" name="room_floor" required min="0" max="99" maxlength="2" placeholder="property floor number" class="input" value="5">
+         </div>
+         <div class="box">
+            <p>loan <span>*</span></p>
+            <select name="loan" required class="input">
+               <option value="not available" selected>not available</option>
+               <option value="available">available</option>
+               <option value="not available" >not available</option>
+            </select>
+         </div>
+      </div>
+      <div class="box">
+         <p>property description <span>*</span></p>
+         <textarea name="description" maxlength="1000" class="input" required cols="30" rows="10" placeholder="write about property..." >lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </textarea>
+      </div>
+      <div class="checkbox">
+         <div class="box">
+            <p><input type="checkbox" name="lift" value="yes"  />lifts</p>
+            <p><input type="checkbox" name="security_guard" value="yes" checked />security guard</p>
+            <p><input type="checkbox" name="play_ground" value="yes" checked />play ground</p>
+            <p><input type="checkbox" name="garden" value="yes" checked />garden</p>
+            <p><input type="checkbox" name="water_supply" value="yes"  />water supply</p>
+            <p><input type="checkbox" name="power_backup" value="yes"  />power backup</p>
+         </div>
+         <div class="box">
+            <p><input type="checkbox" name="parking_area" value="yes"  />parking area</p>
+            <p><input type="checkbox" name="gym" value="yes"  />gym</p>
+            <p><input type="checkbox" name="shopping_mall" value="yes"  />shopping_mall</p>
+            <p><input type="checkbox" name="hospital" value="yes"  />hospital</p>
+            <p><input type="checkbox" name="school" value="yes"  />school</p>
+            <p><input type="checkbox" name="market_area" value="yes"  />market area</p>
+         </div>
+      </div>
+      <div class="box">
+         <img src="uploaded_files/6GxQ6rE8RDR7Efaz4E9i.jpg" class="image" alt="">
+         <p>update image 01</p>
+         <input type="file" name="image_01" class="input" accept="image/*">
+      </div>
+      <div class="flex"> 
+         <div class="box">
+                        <img src="uploaded_files/A0YFXW3LaqNuqE5S3xVH.jpg" class="image" alt="">
+            <input type="submit" value="delete image 02" name="delete_image_02" class="inline-btn" onclick="return confirm('delete image 02');">
+                        <p>update image 02</p>
+            <input type="file" name="image_02" class="input" accept="image/*">
+         </div>
+         <div class="box">
+                        <img src="uploaded_files/qOWKXlb1lnlbECaxDjVi.jpg" class="image" alt="">
+            <input type="submit" value="delete image 03" name="delete_image_03" class="inline-btn" onclick="return confirm('delete image 03');">
+                        <p>update image 03</p>
+            <input type="file" name="image_03" class="input" accept="image/*">
+         </div>
+         <div class="box">
+                        <p>update image 04</p>
+            <input type="file" name="image_04" class="input" accept="image/*">
+         </div>
+         <div class="box">
+                        <p>update image 05</p>
+            <input type="file" name="image_05" class="input" accept="image/*">
+         </div>   
+      </div>
+      <input type="submit" value="update property" class="btn" name="update">
+   </form>
    </section>
-</div>
-<!-- index section ends -->
-<!-- services section starts  -->
-<section class="services">
-   <h1 class="heading">our services</h1>
-   <div class="box-container">
-      <div class="box">
-         <img src="images/icon-1.png" alt="">
-         <h3>buy house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-2.png" alt="">
-         <h3>rent house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-3.png" alt="">
-         <h3>sell house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-4.png" alt="">
-         <h3>flats and buildings</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-5.png" alt="">
-         <h3>shops and malls</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-6.png" alt="">
-         <h3>24/7 service</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-   </div>
-</section>
-<!-- services section ends -->
-<!-- listings section starts  -->
-<section class="listings">
-   <h1 class="heading">latest listings</h1>
-   <div class="box-container">
-            <form action="" method="POST">
-         <div class="box">
-            <input type="hidden" name="property_id" value="FxIEVui9vXVmClbXsJQR">
-                        <button type="submit" name="save" class="save"><i class="fas fa-heart"></i><span>saved</span></button>
-                        <div class="thumb">
-               <p class="total-images"><i class="far fa-image"></i><span>3</span></p> 
-               <img src="uploaded_files/6GxQ6rE8RDR7Efaz4E9i.jpg" alt="">
-            </div>
-            <div class="admin">
-               <h3>a</h3>
-               <div>
-                  <p>ali@a</p>
-                  <span>2023-08-31</span>
-               </div>
-            </div>
-         </div>
-         <div class="box">
-            <div class="price"><span><h3>5852 JOD</h3></span>  </div>
-            <h3 class="name">test</h3>
-            <p class="location"><i class="fas fa-map-marker-alt"></i><span>amman</span></p>
-            <div class="flex">
-               <p><i class="fas fa-house"></i><span>house</span></p>
-               <p><i class="fas fa-tag"></i><span>sale</span></p>
-               <p><i class="fas fa-bed"></i><span>4 BHK</span></p>
-               <p><i class="fas fa-trowel"></i><span>ready to move</span></p>
-               <p><i class="fas fa-couch"></i><span>semi-furnished</span></p>
-               <p><i class="fas fa-maximize"></i><span>1515sqft</span></p>
-            </div>
-            <div class="flex-btn">
-               <a href="view_property.html?get_id=FxIEVui9vXVmClbXsJQR" class="btn">view property</a>
-               <input type="submit" value="send enquiry" name="send" class="btn">
-            </div>
-         </div>
-      </form>
-         </div>
-   <div style="margin-top: 2rem; text-align:center;">
-      <a href="listings.html" class="inline-btn">view all</a>
-   </div>
-</section>
-<!-- listings section ends -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
 
@@ -237,7 +294,7 @@
       </div>
 
       <!-- <div class="box">
-         <a href="index.html"><span></span></a>
+         <a href="home.html"><span></span></a>
          <a href="about.html"><span></span></a>
          <a href="contact.html"><span></span></a>
          <a href="listings.html"><span> </span></a>
@@ -259,11 +316,5 @@
 
 <!-- footer section ends --><!-- custom js file link  -->
 <script src="js/script.js"></script>
-<script>
-   let range = document.querySelector("#range");
-   range.oninput = () =>{
-      document.querySelector('#output').innerHTML = range.value;
-   }
-</script>
 </body>
 </html>
