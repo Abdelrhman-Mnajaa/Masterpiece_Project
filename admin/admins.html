@@ -6,7 +6,7 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Dashboard</title>
+   <title>Admins</title>
 
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
@@ -34,60 +34,43 @@
 
    <a href="update.html" class="btn">update account</a>
 
-   <a href="./login.html" onclick="return confirm('logout from this website?');" class="delete-btn"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
+   <a href="../components/admin_logout.html" onclick="return confirm('logout from this website?');" class="delete-btn"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
 
 </header>
 
 <div id="menu-btn" class="fas fa-bars"></div><!-- header section ends -->
 
-<!-- dashboard section starts  -->
+<!-- admins section starts  -->
 
-<section class="dashboard">
+<section class="grid">
 
-   <h1 class="heading">dashboard</h1>
+   <h1 class="heading">admins</h1>
+
+   <form action="" method="POST" class="search-form">
+      <input type="text" name="search_box" placeholder="search admins..." maxlength="100" required>
+      <button type="submit" class="fas fa-search" name="search_btn"></button>
+   </form>
 
    <div class="box-container">
 
-   <div class="box">
-            <h3>welcome!</h3>
-      <p>admin</p>
-      <a href="update.html" class="btn">update profile</a>
+         <div class="box" style="order: -1;">
+      <p>name : <span>admin</p>
+      <a href="update.html" class="option-btn">update account</a>
+      <a href="register.html" class="btn">register new</a>
    </div>
-
-   <div class="box">
-            <h3>1</h3>
-      <p>property posted</p>
-      <a href="listings.html" class="btn">view listings</a>
+            <div class="box">
+      <p>name : <span>admin2</p>
+      <form action="" method="POST">
+         <input type="hidden" name="delete_id" value="btfBFr6C6LQ5rGHT2PSS">
+         <input type="submit" value="delete admin" onclick="return confirm('delete this admin?');" name="delete" class="delete-btn">
+      </form>
    </div>
-
-   <div class="box">
-            <h3>4</h3>
-      <p>total users</p>
-      <a href="users.html" class="btn">view users</a>
-   </div>
-
-   <div class="box">
-            <h3>2</h3>
-      <p>total admins</p>
-      <a href="admins.html" class="btn">view admins</a>
-   </div>
-
-   <div class="box">
-            <h3>1</h3>
-      <p>new messages</p>
-      <a href="messages.html" class="btn">view messages</a>
-   </div>
-
+      
    </div>
 
 </section>
 
-
-<!-- dashboard section ends -->
-
-
-
-
+<!-- admins section ends -->
 
 
 
