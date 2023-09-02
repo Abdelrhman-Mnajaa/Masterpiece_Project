@@ -1,19 +1,18 @@
 
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Home</title>
+   <title>View Property</title>
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
    <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
    <!-- custom css file link  -->
    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-   
 <!-- 04 header section starts  -->
 
 <header class="header">
@@ -63,8 +62,6 @@
                <ul>
                   <li><a href="login.html">login now</a></li>
                   <li><a href="register.html">register new</a></li>
-                                    <li><a href="update.html">update profile</a></li>
-                  <li><a href="components/user_logout.html" onclick="return confirm('logout from this website?');">logout</a>
                   </li>
                </ul>
             </li>
@@ -74,151 +71,77 @@
 
 </header>
 
-<!-- header section ends --><!-- home section starts  -->
-<div class="home">
-   <section class="center">
-      <form action="search.html" method="post">
-         <h3>find your perfect home</h3>
+<!-- header section ends --><!-- view property section starts  -->
+<section class="view-property">
+   <h1 class="heading">property details</h1>
+      <div class="details">
+     <div class="swiper images-container">
+         <div class="swiper-wrapper">
+            <img src="uploaded_files/6GxQ6rE8RDR7Efaz4E9i.jpg" alt="" class="swiper-slide">
+                        <img src="uploaded_files/A0YFXW3LaqNuqE5S3xVH.jpg" alt="" class="swiper-slide">
+                                    <img src="uploaded_files/qOWKXlb1lnlbECaxDjVi.jpg" alt="" class="swiper-slide">
+                                             </div>
+         <div class="swiper-pagination"></div>
+     </div>
+      <h3 class="name">test</h3>
+      <p class="location"><i class="fas fa-map-marker-alt"></i><span>amman</span></p>
+      <div class="info">
+         <p><span>5852JOD</span></p>
+         <p><i class="fas fa-user"></i><span>ali@a</span></p>
+         <p><i class="fas fa-phone"></i><a href="tel:1234567890">55</a></p>
+         <p><i class="fas fa-building"></i><span>house</span></p>
+         <p><i class="fas fa-house"></i><span>sale</span></p>
+         <p><i class="fas fa-calendar"></i><span>2023-08-31</span></p>
+      </div>
+      <h3 class="title">details</h3>
+      <div class="flex">
          <div class="box">
-            <p>enter location <span>*</span></p>
-            <input type="text" name="h_location" required maxlength="100" placeholder="" class="input">
+            <p><i>rooms :</i><span>4 BHK</span></p>
+            <p><i>deposit amount : </i><span><span style="margin-right: .5rem;"></span>51551 JOD</span></p>
+            <p><i>status :</i><span>ready to move</span></p>
+            <p><i>bedroom :</i><span>3</span></p>
+            <p><i>bathroom :</i><span>2</span></p>
+            <p><i>balcony :</i><span>2</span></p>
          </div>
-         <div class="flex">
-            <div class="box">
-               <p>property type <span>*</span></p>
-               <select name="h_type" class="input" required>
-                  <option value="flat">flat</option>
-                  <option value="house">house</option>
-                  <option value="shop">shop</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>offer type <span>*</span></p>
-               <select name="h_offer" class="input" required>
-                  <option value="sale">sale</option>
-                  <option value="resale">resale</option>
-                  <option value="rent">rent</option>
-               </select>
-            </div>
-            <div class="box">
-               <p>minimmum budget <span>*</span></p>
-               <select name="h_min" class="input" required>
-                  <option value="5000">5k</option>
-                  <option value="10000">10k</option>
-                  <option value="15000">15k</option>
-                  <option value="20000">20k</option>
-                  <option value="30000">30k</option>
-                  <option value="40000">40k</option>
-                  <option value="40000">40k</option>
-                  <option value="50000">50k</option>
-                  <option value="100000">100k</option>
-                  <option value="500000">500k</option>
-
-               </select>
-            </div>
-            <div class="box">
-               <p>maximum budget <span>*</span></p>
-               <select name="h_max" class="input" required>
-                  <option value="5000">5k</option>
-                  <option value="10000">10k</option>
-                  <option value="15000">15k</option>
-                  <option value="20000">20k</option>
-                  <option value="30000">30k</option>
-                  <option value="40000">40k</option>
-                  <option value="40000">40k</option>
-                  <option value="50000">50k</option>
-                  <option value="100000">100k</option>
-                  <option value="500000">500k</option>
-
-               </select>
-            </div>
+         <div class="box">
+            <p><i>carpet area :</i><span>1515sqft</span></p>
+            <p><i>age :</i><span>5 years</span></p>
+            <p><i>total floors :</i><span>2</span></p>
+            <p><i>room floor :</i><span>5</span></p>
+            <p><i>furnished :</i><span>semi-furnished</span></p>
+            <p><i>loan :</i><span>not available</span></p>
          </div>
-         <input type="submit" value="search property" name="h_search" class="btn">
+      </div>
+      <h3 class="title">amenities</h3>
+      <div class="flex">
+         <div class="box">
+            <p><i class="fas fa-times"></i><span>lifts</span></p>
+            <p><i class="fas fa-check"></i><span>security guards</span></p>
+            <p><i class="fas fa-check"></i><span>play ground</span></p>
+            <p><i class="fas fa-check"></i><span>gardens</span></p>
+            <p><i class="fas fa-times"></i><span>water supply</span></p>
+            <p><i class="fas fa-times"></i><span>power backup</span></p>
+         </div>
+         <div class="box">
+            <p><i class="fas fa-times"></i><span>parking area</span></p>
+            <p><i class="fas fa-times"></i><span>gym</span></p>
+            <p><i class="fas fa-times"></i><span>shopping mall</span></p>
+            <p><i class="fas fa-times"></i><span>hospital</span></p>
+            <p><i class="fas fa-times"></i><span>schools</span></p>
+            <p><i class="fas fa-times"></i><span>market area</span></p>
+         </div>
+      </div>
+      <h3 class="title">description</h3>
+      <p class="description">lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem lorem </p>
+      <form action="" method="post" class="flex-btn">
+         <input type="hidden" name="property_id" value="FxIEVui9vXVmClbXsJQR">
+                  <button type="submit" name="save" class="save"><i class="far fa-heart"></i><span>save</span></button>
+                  <input type="submit" value="send enquiry" name="send" class="btn">
       </form>
+   </div>
    </section>
-</div>
-<!-- home section ends -->
-<!-- services section starts  -->
-<section class="services">
-   <h1 class="heading">our services</h1>
-   <div class="box-container">
-      <div class="box">
-         <img src="images/icon-1.png" alt="">
-         <h3>buy house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-2.png" alt="">
-         <h3>rent house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-3.png" alt="">
-         <h3>sell house</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-4.png" alt="">
-         <h3>flats and buildings</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-5.png" alt="">
-         <h3>shops and malls</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-      <div class="box">
-         <img src="images/icon-6.png" alt="">
-         <h3>24/7 service</h3>
-         <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Doloremque, incidunt.</p>
-      </div>
-   </div>
-</section>
-<!-- services section ends -->
-<!-- listings section starts  -->
-<section class="listings">
-   <h1 class="heading">latest listings</h1>
-   <div class="box-container">
-            <form action="" method="POST">
-         <div class="box">
-            <input type="hidden" name="property_id" value="FxIEVui9vXVmClbXsJQR">
-                        <button type="submit" name="save" class="save"><i class="fas fa-heart"></i><span>saved</span></button>
-                        <div class="thumb">
-               <p class="total-images"><i class="far fa-image"></i><span>3</span></p> 
-               <img src="uploaded_files/6GxQ6rE8RDR7Efaz4E9i.jpg" alt="">
-            </div>
-            <div class="admin">
-               <h3>a</h3>
-               <div>
-                  <p>ali@a</p>
-                  <span>2023-08-31</span>
-               </div>
-            </div>
-         </div>
-         <div class="box">
-            <div class="price"><span><h3>5852 JOD</h3></span>  </div>
-            <h3 class="name">test</h3>
-            <p class="location"><i class="fas fa-map-marker-alt"></i><span>amman</span></p>
-            <div class="flex">
-               <p><i class="fas fa-house"></i><span>house</span></p>
-               <p><i class="fas fa-tag"></i><span>sale</span></p>
-               <p><i class="fas fa-bed"></i><span>4 BHK</span></p>
-               <p><i class="fas fa-trowel"></i><span>ready to move</span></p>
-               <p><i class="fas fa-couch"></i><span>semi-furnished</span></p>
-               <p><i class="fas fa-maximize"></i><span>1515sqft</span></p>
-            </div>
-            <div class="flex-btn">
-               <a href="view_property.html?get_id=FxIEVui9vXVmClbXsJQR" class="btn">view property</a>
-               <input type="submit" value="send enquiry" name="send" class="btn">
-            </div>
-         </div>
-      </form>
-         </div>
-   <div style="margin-top: 2rem; text-align:center;">
-      <a href="listings.html" class="inline-btn">view all</a>
-   </div>
-</section>
-<!-- listings section ends -->
+<!-- view property section ends -->
+<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
 
@@ -260,10 +183,23 @@
 <!-- footer section ends --><!-- custom js file link  -->
 <script src="js/script.js"></script>
 <script>
-   let range = document.querySelector("#range");
-   range.oninput = () =>{
-      document.querySelector('#output').innerHTML = range.value;
-   }
+var swiper = new Swiper(".images-container", {
+   effect: "coverflow",
+   grabCursor: true,
+   centeredSlides: true,
+   slidesPerView: "auto",
+   loop:true,
+   coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 200,
+      modifier: 3,
+      slideShadows: true,
+   },
+   pagination: {
+      el: ".swiper-pagination",
+   },
+});
 </script>
 </body>
 </html>
