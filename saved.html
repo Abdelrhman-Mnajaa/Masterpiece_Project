@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>saved</title>
+   <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+   <!-- custom css file link  -->
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+   
+<!-- 04 header section starts  -->
+
+<header class="header">
+
+   <nav class="navbar nav-1">
+      <section class="flex">
+         <a href="home.html" class="logo"><i class="fas fa-house"></i>Rente </a>
+
+         <ul>
+            <li><a href="post_property.html" >post property<i class="fas fa-paper-plane"></i></a></li>
+         </ul>
+      </section>
+   </nav>
+
+   <nav class="navbar nav-2">
+      <section class="flex">
+         <div id="menu-btn" class="fas fa-bars"></div>
+
+         <div class="menu">
+            <ul>
+               <li><a href="#">my listings<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="dashboard.html">dashboard</a></li>
+                     <li><a href="post_property.html">post property</a></li>
+                     <li><a href="my_listings.html">my listings</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">options<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="search.html">filter search</a></li>
+                     <li><a href="listings.html">all listings</a></li>
+                  </ul>
+               </li>
+               <li><a href="#">help<i class="fas fa-angle-down"></i></a>
+                  <ul>
+                     <li><a href="about.html">about us</a></i></li>
+                     <li><a href="contact.html">contact us</a></i></li>
+                     <li><a href="contact.html#faq">FAQ</a></i></li>
+                  </ul>
+               </li>
+            </ul>
+         </div>
+
+         <ul>
+            <li><a href="saved.html">saved <i class="far fa-heart"></i></a></li>
+            <li><a href="#">account <i class="fas fa-angle-down"></i></a>
+               <ul>
+                  <li><a href="login.html">login now</a></li>
+                  <li><a href="register.html">register new</a></li>
+                                    <li><a href="update.html">update profile</a></li>
+                  <li><a href="components/user_logout.html" onclick="return confirm('logout from this website?');">logout</a>
+                  </li>
+               </ul>
+            </li>
+         </ul>
+      </section>
+   </nav>
+
+</header>
+
+<!-- header section ends --><section class="listings">
+   <h1 class="heading">saved listings</h1>
+   <div class="box-container">
+            <form action="" method="POST">
+         <div class="box">
+            <input type="hidden" name="property_id" value="FxIEVui9vXVmClbXsJQR">
+                        <button type="submit" name="save" class="save"><i class="fas fa-heart"></i><span>remove from saved</span></button>
+                        <div class="thumb">
+               <p class="total-images"><i class="far fa-image"></i><span>3</span></p> 
+               <img src="uploaded_files/6GxQ6rE8RDR7Efaz4E9i.jpg" alt="">
+            </div>
+            <div class="admin">
+               <h3>a</h3>
+               <div>
+                  <p>ali@a</p>
+                  <span>2023-08-31</span>
+               </div>
+            </div>
+         </div>
+         <div class="box">
+            <div class="price"><span>5852 JOD</span></div>
+            <h3 class="name">test</h3>
+            <p class="location"><i class="fas fa-map-marker-alt"></i><span>amman</span></p>
+            <div class="flex">
+               <p><i class="fas fa-house"></i><span>house</span></p>
+               <p><i class="fas fa-tag"></i><span>sale</span></p>
+               <p><i class="fas fa-bed"></i><span>4 BHK</span></p>
+               <p><i class="fas fa-trowel"></i><span>ready to move</span></p>
+               <p><i class="fas fa-couch"></i><span>semi-furnished</span></p>
+               <p><i class="fas fa-maximize"></i><span>1515sqft</span></p>
+            </div>
+            <div class="flex-btn">
+               <a href="view_property.html?get_id=FxIEVui9vXVmClbXsJQR" class="btn">view property</a>
+               <input type="submit" value="send enquiry" name="send" class="btn">
+            </div>
+         </div>
+      </form>
+         </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+
+<!-- footer section starts  -->
+<!-- Page #03   -->
+
+<footer class="footer">
+
+   <section class="flex" style="flex-wrap:nowrap">
+
+      <div class="box" >
+         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>123456789</span></a>
+         <a href="tel:1112223333"><i class="fas fa-phone"></i><span>1112223333</span></a>
+         <a href="mailto:Abd@gmail.com"><i class="fas fa-envelope"></i><span>Abd@gmail.com</span></a>
+         <a href="#"><i class="fas fa-map-marker-alt"></i><span>Jordan -Aqaba 77110</span></a>
+      </div>
+
+      <!-- <div class="box">
+         <a href="home.html"><span></span></a>
+         <a href="about.html"><span></span></a>
+         <a href="contact.html"><span></span></a>
+         <a href="listings.html"><span> </span></a>
+         <a href="saved.html"><span> </span></a>
+      </div> -->
+
+      <div class="box">
+         <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
+         <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
+         <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
+         <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
+
+      </div>
+
+   </section>
+
+
+</footer>
+
+<!-- footer section ends --><!-- custom js file link  -->
+<script src="js/script.js"></script>
+
+</body>
+</html>
