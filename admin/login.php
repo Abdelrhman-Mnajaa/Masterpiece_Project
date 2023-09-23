@@ -1,4 +1,28 @@
+<?php
 
+include '../components/connect.php';
+
+if(isset($_POST['submit'])){
+
+   $name = $_POST['name'];
+   $name = filter_var($name, FILTER_SANITIZE_STRING); 
+   $pass = sha1($_POST['pass']);
+   $pass = filter_var($pass, FILTER_SANITIZE_STRING); 
+
+   $select_admins = $conn->prepare("SELECT * FROM `admins` WHERE name = ? AND password = ? LIMIT 1");
+   $select_admins->execute([$name, $pass]);
+   $row = $select_admins->fetch(PDO::FETCH_ASSOC);
+
+   if($select_admins->rowCount() > 0){
+      setcookie('admin_id', $row['id'], time() + 60*60*24*30, '/');
+      header('location:dashboard.php');
+   }else{
+      $warning_msg[] = 'Incorrect username or password!';
+   }
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -51,6 +75,7 @@
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
 
+<?php include '../components/message.php'; ?>
 
 </body>
 </html>

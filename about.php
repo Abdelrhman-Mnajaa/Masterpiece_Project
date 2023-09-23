@@ -1,4 +1,14 @@
+<?php  
 
+include 'components/connect.php';
+
+if(isset($_COOKIE['user_id'])){
+   $user_id = $_COOKIE['user_id'];
+}else{
+   $user_id = '';
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -17,67 +27,8 @@
 </head>
 <body>
    
-<!-- 04 header section starts  -->
+<?php include 'components/user_header.php'; ?>
 
-<header class="header">
-
-   <nav class="navbar nav-1">
-      <section class="flex">
-         <a href="index.html" class="logo"><i class="fas fa-house"></i>Rente </a>
-
-         <ul>
-            <li><a href="post_property.html" >post property<i class="fas fa-paper-plane"></i></a></li>
-         </ul>
-      </section>
-   </nav>
-
-   <nav class="navbar nav-2">
-      <section class="flex">
-         <div id="menu-btn" class="fas fa-bars"></div>
-
-         <div class="menu">
-            <ul>
-               <li><a href="#">my listings<i class="fas fa-angle-down"></i></a>
-                  <ul>
-                     <li><a href="dashboard.html">dashboard</a></li>
-                     <li><a href="post_property.html">post property</a></li>
-                     <li><a href="my_listings.html">my listings</a></li>
-                  </ul>
-               </li>
-               <li><a href="#">options<i class="fas fa-angle-down"></i></a>
-                  <ul>
-                     <li><a href="search.html">filter search</a></li>
-                     <li><a href="listings.html">all listings</a></li>
-                  </ul>
-               </li>
-               <li><a href="#">help<i class="fas fa-angle-down"></i></a>
-                  <ul>
-                     <li><a href="about.html">about us</a></i></li>
-                     <li><a href="contact.html">contact us</a></i></li>
-                     <li><a href="contact.html#faq">FAQ</a></i></li>
-                  </ul>
-               </li>
-            </ul>
-         </div>
-
-         <ul>
-            <li><a href="saved.html">saved <i class="far fa-heart"></i></a></li>
-            <li><a href="#">account <i class="fas fa-angle-down"></i></a>
-               <ul>
-                  <li><a href="login.html">login now</a></li>
-                  <li><a href="register.html">register new</a></li>
-                                    <li><a href="update.html">update profile</a></li>
-                  <li><a href="components/user_logout.html" onclick="return confirm('logout from this website?');">logout</a>
-                  </li>
-               </ul>
-            </li>
-         </ul>
-      </section>
-   </nav>
-
-</header>
-
-<!-- header section ends -->
 <!-- about section starts  -->
 
 <section class="about">
@@ -89,7 +40,7 @@
       <div class="content">
          <h3>why choose us?</h3>
          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum dolorem provident voluptatum distinctio laborum veritatis vitae suscipit praesentium fugiat unde?</p>
-         <a href="contact.html" class="inline-btn">contact us</a>
+         <a href="contact.php" class="inline-btn">contact us</a>
       </div>
    </div>
 
@@ -254,44 +205,8 @@
 
 
 
+<?php include 'components/footer.php'; ?>
 
-
-<!-- footer section starts  -->
-<!-- Page #03   -->
-
-<footer class="footer">
-
-   <section class="flex" style="flex-wrap:nowrap">
-
-      <div class="box" >
-         <a href="tel:1234567890"><i class="fas fa-phone"></i><span>123456789</span></a>
-         <a href="tel:1112223333"><i class="fas fa-phone"></i><span>1112223333</span></a>
-         <a href="mailto:Abd@gmail.com"><i class="fas fa-envelope"></i><span>Abd@gmail.com</span></a>
-         <a href="#"><i class="fas fa-map-marker-alt"></i><span>Jordan -Aqaba 77110</span></a>
-      </div>
-
-      <!-- <div class="box">
-         <a href="home.html"><span></span></a>
-         <a href="about.html"><span></span></a>
-         <a href="contact.html"><span></span></a>
-         <a href="listings.html"><span> </span></a>
-         <a href="saved.html"><span> </span></a>
-      </div> -->
-
-      <div class="box">
-         <a href="#"><span>facebook</span><i class="fab fa-facebook-f"></i></a>
-         <a href="#"><span>twitter</span><i class="fab fa-twitter"></i></a>
-         <a href="#"><span>linkedin</span><i class="fab fa-linkedin"></i></a>
-         <a href="#"><span>instagram</span><i class="fab fa-instagram"></i></a>
-
-      </div>
-
-   </section>
-
-
-</footer>
-
-<!-- footer section ends -->
 <!-- custom js file link  -->
 <script src="js/script.js"></script>
 

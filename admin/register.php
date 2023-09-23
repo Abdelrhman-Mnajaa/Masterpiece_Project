@@ -1,4 +1,42 @@
+<?php
 
+include '../components/connect.php';
+
+if(isset($_COOKIE['admin_id'])){
+   $admin_id = $_COOKIE['admin_id'];
+}else{
+   $admin_id = '';
+   header('location:login.php');
+}
+
+if(isset($_POST['submit'])){
+
+   $id = create_unique_id();
+   $name = $_POST['name'];
+   $name = filter_var($name, FILTER_SANITIZE_STRING); 
+   $pass = sha1($_POST['pass']);
+   $pass = filter_var($pass, FILTER_SANITIZE_STRING); 
+   $c_pass = sha1($_POST['c_pass']);
+   $c_pass = filter_var($c_pass, FILTER_SANITIZE_STRING);   
+
+   $select_admins = $conn->prepare("SELECT * FROM `admins` WHERE name = ?");
+   $select_admins->execute([$name]);
+
+   if($select_admins->rowCount() > 0){
+      $warning_msg[] = 'Username already taken!';
+   }else{
+      if($pass != $c_pass){
+         $warning_msg[] = 'Password not matched!';
+      }else{
+         $insert_admin = $conn->prepare("INSERT INTO `admins`(id, name, password) VALUES(?,?,?)");
+         $insert_admin->execute([$id, $name, $c_pass]);
+         $success_msg[] = 'Registered successfully!';
+      }
+   }
+
+}
+
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -18,27 +56,8 @@
 <body>
    
 <!-- header section starts  -->
-<header class="header">
-
-   <div id="close-btn"><i class="fas fa-times"></i></div>
-
-   <a href="dashboard.html" class="logo">Admin Dashboard.</a>
-
-   <nav class="navbar">
-      <a href="dashboard.html"><i class="fas fa-home"></i><span>home</span></a>
-      <a href="listings.html"><i class="fas fa-building"></i><span>listings</span></a>
-      <a href="users.html"><i class="fas fa-user"></i><span>users</span></a>
-      <a href="admins.html"><i class="fas fa-user-gear"></i><span>admins</span></a>
-      <a href="messages.html"><i class="fas fa-message"></i><span>messages</span></a>
-   </nav>
-
-   <a href="update.html" class="btn">update account</a>
-
-   <a href="./login.html" onclick="return confirm('logout from this website?');" class="delete-btn"><i class="fas fa-right-from-bracket"></i><span>logout</span></a>
-
-</header>
-
-<div id="menu-btn" class="fas fa-bars"></div><!-- header section ends -->
+<?php include '../components/admin_header.php'; ?>
+<!-- header section ends -->
 
 <!-- register section starts  -->
 
@@ -78,6 +97,7 @@
 <!-- custom js file link  -->
 <script src="../js/admin_script.js"></script>
 
+<?php include '../components/message.php'; ?>
 
 </body>
 </html>
